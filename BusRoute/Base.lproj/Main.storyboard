@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="BusRoute" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" mapType="standard" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gVq-Ec-j1D">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </mapView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bus" translatesAutoresizingMaskIntoConstraints="NO" id="jNm-ze-ZCH">
+                                <rect key="frame" x="0.0" y="706" width="414" height="161"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jNm-ze-ZCH" secondAttribute="height" multiplier="18:7" id="t7D-H1-kjU"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWY-rQ-1gt" customClass="CustomizedButton" customModule="BusRoute" customModuleProvider="target">
+                                <rect key="frame" x="84.5" y="56" width="245" height="46"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.69739940069999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="25"/>
+                                <inset key="titleEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" title="Login driver">
+                                    <color key="titleColor" red="0.1647058824" green="0.31764705879999999" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="kL5-Vc-1tw">
+                                <rect key="frame" x="84.5" y="112" width="245" height="106"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Driver name" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kwz-vi-5Lg" customClass="TKFormTextField" customModule="TKFormTextField">
+                                        <rect key="frame" x="0.0" y="0.0" width="245" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.19889944300000001" green="0.38939001769999998" blue="0.46986040610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Driver password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a7P-ZV-FuV" customClass="TKFormTextField" customModule="TKFormTextField">
+                                        <rect key="frame" x="0.0" y="36" width="245" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.19889944300000001" green="0.38939001769999998" blue="0.46986040610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Device token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="liB-wY-h8H" customClass="TKFormTextField" customModule="TKFormTextField">
+                                        <rect key="frame" x="0.0" y="72" width="245" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.19889944300000001" green="0.38939001769999998" blue="0.46986040610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jNm-ze-ZCH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AFI-AD-GLU"/>
+                            <constraint firstItem="XWY-rQ-1gt" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="3/10" id="ITL-8r-O5m"/>
+                            <constraint firstItem="kL5-Vc-1tw" firstAttribute="top" secondItem="XWY-rQ-1gt" secondAttribute="bottom" constant="10" id="Jzz-Sg-ewv"/>
+                            <constraint firstItem="gVq-Ec-j1D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XUP-H8-cP5"/>
+                            <constraint firstItem="kL5-Vc-1tw" firstAttribute="width" secondItem="XWY-rQ-1gt" secondAttribute="width" id="f8B-7H-tjL"/>
+                            <constraint firstItem="XWY-rQ-1gt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jHc-1J-j9d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gVq-Ec-j1D" secondAttribute="trailing" id="k2f-La-bFq"/>
+                            <constraint firstItem="jNm-ze-ZCH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lTO-8R-D6i"/>
+                            <constraint firstItem="kL5-Vc-1tw" firstAttribute="centerX" secondItem="XWY-rQ-1gt" secondAttribute="centerX" id="lv5-hz-Db8"/>
+                            <constraint firstItem="jNm-ze-ZCH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="5" id="mfA-tO-wGX"/>
+                            <constraint firstItem="gVq-Ec-j1D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qAB-bY-OpV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gVq-Ec-j1D" secondAttribute="bottom" id="t6L-LZ-0Zn"/>
+                            <constraint firstItem="XWY-rQ-1gt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="vCJ-0Y-wz6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="deviceTokenTextField" destination="liB-wY-h8H" id="RFl-nE-z42"/>
+                        <outlet property="imageView" destination="jNm-ze-ZCH" id="LFB-9k-ejU"/>
+                        <outlet property="loginDriverButton" destination="XWY-rQ-1gt" id="NZ6-Hb-FdM"/>
+                        <outlet property="loginFormView" destination="kL5-Vc-1tw" id="KYH-7K-FAF"/>
+                        <outlet property="mapView" destination="gVq-Ec-j1D" id="D9q-9V-fFd"/>
+                        <outlet property="nameTextField" destination="kwz-vi-5Lg" id="HqU-iQ-fNo"/>
+                        <outlet property="passwordTextField" destination="a7P-ZV-FuV" id="rYQ-aW-Knh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+        <!--Message View Controller-->
+        <scene sceneID="Dfj-7Y-ct9">
+            <objects>
+                <viewController storyboardIdentifier="messageVC" id="eol-S9-RZD" customClass="MessageViewController" customModule="BusRoute" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="odv-zG-CDS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" allowsLinkPreview="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlc-Qe-xo3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2j-JD-t5G">
+                                <rect key="frame" x="0.0" y="780" width="414" height="82"/>
+                                <color key="backgroundColor" red="0.1647058824" green="0.31764705879999999" blue="0.3803921569" alpha="0.95023544520000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonClicked:" destination="eol-S9-RZD" eventType="touchUpInside" id="Z7t-4p-MFq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="czw-RE-30q" firstAttribute="trailing" secondItem="qlc-Qe-xo3" secondAttribute="trailing" id="5v9-oU-VxB"/>
+                            <constraint firstItem="g2j-JD-t5G" firstAttribute="leading" secondItem="czw-RE-30q" secondAttribute="leading" id="91Q-ti-6cv"/>
+                            <constraint firstItem="qlc-Qe-xo3" firstAttribute="top" secondItem="czw-RE-30q" secondAttribute="top" id="CHi-JI-tnp"/>
+                            <constraint firstItem="g2j-JD-t5G" firstAttribute="bottom" secondItem="czw-RE-30q" secondAttribute="bottom" id="Cls-Ys-XHL"/>
+                            <constraint firstItem="g2j-JD-t5G" firstAttribute="trailing" secondItem="czw-RE-30q" secondAttribute="trailing" id="TCH-d5-aXK"/>
+                            <constraint firstItem="czw-RE-30q" firstAttribute="bottom" secondItem="qlc-Qe-xo3" secondAttribute="bottom" id="dZe-QW-6ua"/>
+                            <constraint firstItem="qlc-Qe-xo3" firstAttribute="leading" secondItem="czw-RE-30q" secondAttribute="leading" id="l8H-Dz-jKH"/>
+                            <constraint firstItem="g2j-JD-t5G" firstAttribute="height" secondItem="qlc-Qe-xo3" secondAttribute="height" multiplier="1/10" id="s3R-3S-82x"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="czw-RE-30q"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="qlc-Qe-xo3" id="NqK-IV-UQB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MT4-uH-k9c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031.8840579710145" y="113.83928571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bus" width="4500" height="3000"/>
+    </resources>
+</document>
